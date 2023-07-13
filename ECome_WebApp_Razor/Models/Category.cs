@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
-namespace ECom_WebApp.Models
+namespace ECome_WebApp_Razor.Models
 {
     public class Category
     {
