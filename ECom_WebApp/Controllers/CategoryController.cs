@@ -1,20 +1,19 @@
-﻿using ECom_WebApp.Data;
-using ECom_WebApp.Models;
+﻿using BookShop.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECom_WebApp.Controllers
+namespace BookShop.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDBContext _DbContext;
-        public CategoryController(ApplicationDBContext DbContext)
+        private readonly ICategoryRepository _categoryRepo;
+        public CategoryController(ICategoryRepository DbContext)
         {
-            _DbContext = DbContext;
+            _categoryRepo = DbContext;
         }
         public IActionResult Index()
         {
-            var objCategoryList = _DbContext.Categories.ToList();
+            var objCategoryList = _categoryRepo.GetAll();
             return View(objCategoryList);
         }
         public IActionResult Create()
@@ -30,8 +29,8 @@ namespace ECom_WebApp.Controllers
             }
             if (ModelState.IsValid)
             {
-                _DbContext.Categories.Add(obj);
-                _DbContext.SaveChanges();
+                _categoryRepo.Add(obj);
+                _categoryRepo.Save();
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
@@ -44,7 +43,7 @@ namespace ECom_WebApp.Controllers
             {
                 return NotFound();
             }
-            Category categoryFromDb = _DbContext.Categories.Find(id);
+            Category categoryFromDb = _categoryRepo.Get(u=> u.Id==id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -56,8 +55,8 @@ namespace ECom_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _DbContext.Categories.Update(obj);
-                _DbContext.SaveChanges();
+                _categoryRepo.Update(obj);
+                _categoryRepo.Save();
                 TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
@@ -70,7 +69,7 @@ namespace ECom_WebApp.Controllers
             {
                 return NotFound();
             }
-            Category categoryFromDb = _DbContext.Categories.Find(id);
+            Category categoryFromDb = _categoryRepo.Get(u => u.Id == id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -81,12 +80,12 @@ namespace ECom_WebApp.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
-            Category obj = _DbContext.Categories.Find(id); 
+            Category obj = _categoryRepo.Get(u => u.Id == id);
             if (obj == null) { 
                 return NotFound();
             }
-            _DbContext.Categories.Remove(obj);
-            _DbContext.SaveChanges();
+            _categoryRepo.Remove(obj);
+            _categoryRepo.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }

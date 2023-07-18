@@ -1,5 +1,5 @@
-global using ECome_WebApp_Razor.Data;
-global using ECome_WebApp_Razor.Models;
+global using BookShope_WebApp_Razor.Data;
+global using BookShope_WebApp_Razor.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

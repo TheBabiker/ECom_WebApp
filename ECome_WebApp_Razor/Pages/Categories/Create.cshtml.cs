@@ -1,9 +1,9 @@
 
-using ECome_WebApp_Razor.Models;
+using BookShope_WebApp_Razor.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ECome_WebApp_Razor.Pages.Categories
+namespace BookShope_WebApp_Razor.Pages.Categories
 {
     [BindProperties]
     public class CreateModel : PageModel

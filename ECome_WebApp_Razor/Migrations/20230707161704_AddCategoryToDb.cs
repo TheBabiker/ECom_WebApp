@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace ECome_WebApp_Razor.Migrations
+namespace BookShope_WebApp_Razor.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategoryToDb : Migration

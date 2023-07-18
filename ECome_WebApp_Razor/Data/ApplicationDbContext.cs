@@ -1,7 +1,7 @@
-﻿using ECome_WebApp_Razor.Models;
+﻿using BookShope_WebApp_Razor.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECome_WebApp_Razor.Data
+namespace BookShope_WebApp_Razor.Data
 {
     public class ApplicationDbContext : DbContext
     {

@@ -699,7 +699,7 @@
 
   const VERSION = '5.1.0';
 
-  class BaseComponent {
+  class BasBookShopponent {
     constructor(element) {
       element = getElement(element);
 
@@ -802,7 +802,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Alert extends BaseComponent {
+  class Alert extends BasBookShopponent {
     // Getters
     static get NAME() {
       return NAME$d;
@@ -891,7 +891,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Button extends BaseComponent {
+  class Button extends BasBookShopponent {
     // Getters
     static get NAME() {
       return NAME$c;
@@ -1164,7 +1164,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Carousel extends BaseComponent {
+  class Carousel extends BasBookShopponent {
     constructor(element, config) {
       super(element);
       this._items = null;
@@ -1670,7 +1670,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Collapse extends BaseComponent {
+  class Collapse extends BasBookShopponent {
     constructor(element, config) {
       super(element);
       this._isTransitioning = false;
@@ -2012,7 +2012,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Dropdown extends BaseComponent {
+  class Dropdown extends BasBookShopponent {
     constructor(element, config) {
       super(element);
       this._popper = null;
@@ -2788,7 +2788,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Modal extends BaseComponent {
+  class Modal extends BasBookShopponent {
     constructor(element, config) {
       super(element);
       this._config = this._getConfig(config);
@@ -3202,7 +3202,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Offcanvas extends BaseComponent {
+  class Offcanvas extends BasBookShopponent {
     constructor(element, config) {
       super(element);
       this._config = this._getConfig(config);
@@ -3619,7 +3619,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Tooltip extends BaseComponent {
+  class Tooltip extends BasBookShopponent {
     constructor(element, config) {
       if (typeof Popper__namespace === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
@@ -4383,7 +4383,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class ScrollSpy extends BaseComponent {
+  class ScrollSpy extends BasBookShopponent {
     constructor(element, config) {
       super(element);
       this._scrollElement = this._element.tagName === 'BODY' ? window : this._element;
@@ -4609,7 +4609,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Tab extends BaseComponent {
+  class Tab extends BasBookShopponent {
     // Getters
     static get NAME() {
       return NAME$1;
@@ -4813,7 +4813,7 @@
    * ------------------------------------------------------------------------
    */
 
-  class Toast extends BaseComponent {
+  class Toast extends BasBookShopponent {
     constructor(element, config) {
       super(element);
       this._config = this._getConfig(config);

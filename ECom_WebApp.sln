@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECom_WebApp", "ECom_WebApp\ECom_WebApp.csproj", "{12BD436B-D372-40E9-A2A9-485EEE0D9E53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop", "ECom_WebApp\BookShop.csproj", "{12BD436B-D372-40E9-A2A9-485EEE0D9E53}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECome_WebApp_Razor", "ECome_WebApp_Razor\ECome_WebApp_Razor.csproj", "{8C4B345F-3EF1-4F6F-9F08-04D9955784A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop_Razor", "ECome_WebApp_Razor\BookShop_Razor.csproj", "{8C4B345F-3EF1-4F6F-9F08-04D9955784A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECom.DataAccess", "E_Com.DataAccess\ECom.DataAccess.csproj", "{427B105A-E5D5-42E0-B9AD-4349F9543BED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop.DataAccess", "E_Com.DataAccess\BookShop.DataAccess.csproj", "{427B105A-E5D5-42E0-B9AD-4349F9543BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECom.Models", "ECom.Models\ECom.Models.csproj", "{04A16AD1-8347-4AAC-9D0A-0AE1C811A902}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop.Models", "ECom.Models\BookShop.Models.csproj", "{04A16AD1-8347-4AAC-9D0A-0AE1C811A902}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECom.Utility", "ECom.Utility\ECom.Utility.csproj", "{2526F4FA-3878-40CF-92AB-3A6900872B98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop.Utility", "ECom.Utility\BookShop.Utility.csproj", "{2526F4FA-3878-40CF-92AB-3A6900872B98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECome_WebApp_Razor.Pages.Categories
+namespace BookShope_WebApp_Razor.Pages.Categories
 {
     [BindProperties]
     public class EditModel : PageModel

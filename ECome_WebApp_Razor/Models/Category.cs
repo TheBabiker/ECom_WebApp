@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace ECome_WebApp_Razor.Models
+namespace BookShope_WebApp_Razor.Models
 {
     public class Category
     {

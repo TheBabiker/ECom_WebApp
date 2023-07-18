@@ -673,7 +673,7 @@ var Data = {
 
 const VERSION = '5.1.0';
 
-class BaseComponent {
+class BasBookShopponent {
   constructor(element) {
     element = getElement(element);
 
@@ -776,7 +776,7 @@ const CLASS_NAME_SHOW$8 = 'show';
  * ------------------------------------------------------------------------
  */
 
-class Alert extends BaseComponent {
+class Alert extends BasBookShopponent {
   // Getters
   static get NAME() {
     return NAME$d;
@@ -865,7 +865,7 @@ const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$b}${DATA_API_KEY$7}`;
  * ------------------------------------------------------------------------
  */
 
-class Button extends BaseComponent {
+class Button extends BasBookShopponent {
   // Getters
   static get NAME() {
     return NAME$c;
@@ -1138,7 +1138,7 @@ const POINTER_TYPE_PEN = 'pen';
  * ------------------------------------------------------------------------
  */
 
-class Carousel extends BaseComponent {
+class Carousel extends BasBookShopponent {
   constructor(element, config) {
     super(element);
     this._items = null;
@@ -1644,7 +1644,7 @@ const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="collapse"]';
  * ------------------------------------------------------------------------
  */
 
-class Collapse extends BaseComponent {
+class Collapse extends BasBookShopponent {
   constructor(element, config) {
     super(element);
     this._isTransitioning = false;
@@ -1986,7 +1986,7 @@ const DefaultType$8 = {
  * ------------------------------------------------------------------------
  */
 
-class Dropdown extends BaseComponent {
+class Dropdown extends BasBookShopponent {
   constructor(element, config) {
     super(element);
     this._popper = null;
@@ -2762,7 +2762,7 @@ const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="modal"]';
  * ------------------------------------------------------------------------
  */
 
-class Modal extends BaseComponent {
+class Modal extends BasBookShopponent {
   constructor(element, config) {
     super(element);
     this._config = this._getConfig(config);
@@ -3176,7 +3176,7 @@ const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="offcanvas"]';
  * ------------------------------------------------------------------------
  */
 
-class Offcanvas extends BaseComponent {
+class Offcanvas extends BasBookShopponent {
   constructor(element, config) {
     super(element);
     this._config = this._getConfig(config);
@@ -3593,7 +3593,7 @@ const TRIGGER_MANUAL = 'manual';
  * ------------------------------------------------------------------------
  */
 
-class Tooltip extends BaseComponent {
+class Tooltip extends BasBookShopponent {
   constructor(element, config) {
     if (typeof Popper === 'undefined') {
       throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
@@ -4357,7 +4357,7 @@ const METHOD_POSITION = 'position';
  * ------------------------------------------------------------------------
  */
 
-class ScrollSpy extends BaseComponent {
+class ScrollSpy extends BasBookShopponent {
   constructor(element, config) {
     super(element);
     this._scrollElement = this._element.tagName === 'BODY' ? window : this._element;
@@ -4583,7 +4583,7 @@ const SELECTOR_DROPDOWN_ACTIVE_CHILD = ':scope > .dropdown-menu .active';
  * ------------------------------------------------------------------------
  */
 
-class Tab extends BaseComponent {
+class Tab extends BasBookShopponent {
   // Getters
   static get NAME() {
     return NAME$1;
@@ -4787,7 +4787,7 @@ const Default = {
  * ------------------------------------------------------------------------
  */
 
-class Toast extends BaseComponent {
+class Toast extends BasBookShopponent {
   constructor(element, config) {
     super(element);
     this._config = this._getConfig(config);
