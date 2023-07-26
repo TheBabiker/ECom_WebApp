@@ -22,5 +22,7 @@ namespace BookShop.DataAccess.Repository
         {
             _db.Products.Update(obj);
         }
+
+   
     }
 }
