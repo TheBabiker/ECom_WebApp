@@ -12,12 +12,16 @@ namespace BookShop.DataAccess.Repository
     {
         private ApplicationDBContext _db;
         public ICategoryRepository CategoryR{ get; private set; }
+        public IProductRepository ProductR { get; private set; }
+
         public UnitOfWork(ApplicationDBContext db)
         {
             _db = db;
             CategoryR = new CategoryRepository(_db);
+            ProductR = new ProductRepository(_db);
+
         }
-       
+
 
         public void Save()
         {

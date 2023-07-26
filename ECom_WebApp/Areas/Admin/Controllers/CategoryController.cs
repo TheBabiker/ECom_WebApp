@@ -3,8 +3,9 @@ using BookShop.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookShop.Controllers
+namespace BookShop.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -44,7 +45,7 @@ namespace BookShop.Controllers
             {
                 return NotFound();
             }
-            Category categoryFromDb = _unitOfWork.CategoryR.Get(u=> u.Id==id);
+            Category categoryFromDb = _unitOfWork.CategoryR.Get(u => u.Id == id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -82,7 +83,8 @@ namespace BookShop.Controllers
         public IActionResult DeletePOST(int? id)
         {
             Category obj = _unitOfWork.CategoryR.Get(u => u.Id == id);
-            if (obj == null) { 
+            if (obj == null)
+            {
                 return NotFound();
             }
             _unitOfWork.CategoryR.Remove(obj);
@@ -92,7 +94,7 @@ namespace BookShop.Controllers
         }
     }
 
-   
+
 }
 
 
