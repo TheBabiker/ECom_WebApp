@@ -1,6 +1,7 @@
 ﻿using BookShop.DataAccess.Repository;
 using BookShop.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookShop.Areas.Admin.Controllers
@@ -16,10 +17,19 @@ namespace BookShop.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var objProductList = _unitOfWork.ProductR.GetAll();
+
             return View(objProductList);
         }
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> CategoryList = _unitOfWork.CategoryR
+              .GetAll().Select(u => new SelectListItem
+              {
+                  Text = u.Name,
+                  Value = u.Id.ToString(),
+              });
+
+            ViewBag.CategoryList = CategoryList;
             return View();
         }
         [HttpPost]
